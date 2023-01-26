@@ -33,7 +33,7 @@ body {
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 600px;
+  max-width: 37.5rem;
   background-color: var(--White);
   border-radius: 0.5rem;
   overflow: hidden;
