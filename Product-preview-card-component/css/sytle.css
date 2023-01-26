@@ -16,8 +16,6 @@ font-family: 'Montserrat', sans-serif;
   --Deep-Aquamarine-Hover: hsla(157, 43%, 18%, 1);
 }
 body {
-  min-height: 100vh;
-  max-height: 100%;
   background-color: var(--Cream);
   font-size: 0.875rem;
   line-height: 1.4375rem;
@@ -26,6 +24,8 @@ body {
   font-family: "Montserrat", sans-serif;
   display: grid;
   place-content: center;
+  min-height: 100vh;
+  max-height: 100%;
 }
 .image-mobile {
   display: none;
@@ -38,16 +38,17 @@ body {
   background-color: var(--White);
   border-radius: 0.5rem;
   overflow: hidden;
-  grid-template-rows: repeat(auto-fit, minmax(1fr, 1fr));
 }
 .info-card {
   padding: 2rem;
+  display: grid;
 }
 span.category {
   font-size: 0.75rem;
   color: var(--Dark-grayish-blue);
   letter-spacing: 0.25rem;
-  line-height: 1rem;
+  /*   line-height: 1rem; */
+  align-self: center;
 }
 .title {
   font-family: "Fraunces", serif;
@@ -61,10 +62,11 @@ span.category {
   line-height: 1.25rem;
   font-weight: 500;
   color: var(--Dark-grayish-blue);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 .price-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
   align-content: center;
   margin-bottom: 2rem;
 }
@@ -111,12 +113,11 @@ span.category {
     background-color: var(--Deep-Aquamarine-Hover);
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   body {
     padding: 2rem;
   }
   .card-container {
-    min-width: 320px;
     grid-template-columns: 1fr;
   }
   .image-desktop {
